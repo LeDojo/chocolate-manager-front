@@ -1,14 +1,45 @@
-# React + Vite
+# Deployment procedure
 
-In .env file (in root folder):
+This documentation will guide you through the deployment of the application. Back-end and Front-end.
+
+## Back-end application deployment
+
+The back-end of the app is written in Express/Node.
+
+Make sure to add your own `.env` file. All the environment variables you will need are listed in the file `env.sample`.
+
+#### To run the project locally:
+
+Install the dependencies:
 
 ```
-VITE_API_URL=http://localhost:3000
+npm install
 ```
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Run the project:
 
-Currently, two official plugins are available:
+```
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### To deploy the project:
+
+- Commit your app to a repository on github.com
+- Create an account on Vercel.com
+- Create a new project called chocolate-manager-back
+- In the secrets section add the environment variable called `MONGO_URL=mongodb://your-mongo-url`
+- Link the project to your github repository corresponding to chocolate-manager-back
+- Whenever you will push to your github repository, your app will be automatically deployed on vercel.
+
+## Front-end deployment
+
+The front-end of the application is written in React.js.
+
+To deploy the app, we are going to use Vercel hosting service.
+
+- Commit your react app to a repository on github.com
+- Create an account on Vercel.com
+- Create a new project called chocolate-manager-front
+- In the secrets section add the environment variable called `VITE_API_URL=https://your-backend-url.domain`
+- Link the project to your github repository corresponding to chocolate-manager-front
+- Whenever you will push to your github repository, your app will be automatically deployed on vercel.
