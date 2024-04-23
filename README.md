@@ -35,6 +35,24 @@ npm run dev
 
 The front-end of the application is written in React.js.
 
+Make sure to add your own `.env` file. All the environment variables you will need are listed in the file `env.sample`.
+
+#### To run the project locally:
+
+Install the dependencies:
+
+```
+npm install
+```
+
+Run the project:
+
+```
+npm run dev
+```
+
+#### To deploy the project:
+
 To deploy the app, we are going to use Vercel hosting service.
 
 - Commit your react app to a repository on github.com
